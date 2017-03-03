@@ -16,5 +16,8 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    
     return "ok",200
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
