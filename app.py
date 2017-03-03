@@ -9,6 +9,13 @@ from flask import make_response
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
+def verify():
+	
+
+	return "Hello world", 200
+
+
 @app.route('/', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -16,7 +23,8 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    return "ok",200
+    return "ok", 200
+
 
 
 if __name__ == '__main__':
