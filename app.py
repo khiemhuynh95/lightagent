@@ -13,14 +13,13 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def verify():
 	
-
 	return "Hello world", 200
 
 
 @app.route('/', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
-    log(req)
+    #log(req)
     print("Request:")
     print(json.dumps(req, indent=4))
 
